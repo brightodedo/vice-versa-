@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{%block body%}
+<div class="container">
+    <h2 style="text-align: center;">Sign Up</h2>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <form action="{{ url_for('landing') }}" method="POST">
+                    <input type="text"  placeholder="Name" class="form-control" name="name" required> 
+                    <input type="email" placeholder="email@address.com" class="form-control" name="email" required>
+                    <input type="text" placeholder="Username" class="form-control" name="username" required>
+                    <div id="error"> {{fault}} </div>
+                    <input type="password" placeholder="password" class="form-control" name="password" required>
+                    <br>
+                    <button class="btn btn-success"> Sign Up </button>
+            </form>
+            <hr>
+            <p>Have an account? <span><a href="{{ url_for('login') }}">Log in</a></span></p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+{% endblock %}

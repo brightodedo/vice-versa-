@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+About
+{% endblock %}  
+
+
+{%block body%}
+<div class="container">
+<br>
+<br>
+<h3 style="text-align: center">About Us</h3>
+<div style="text-align: center;">
+    <img src=".{{ url_for('static', filename='founder.JPG') }}" alt="founder" width="25%">
+    <br>
+    <h3 style="font-size: 3rem;"> Our Founder </h3>
+</div>
+<p>Our company was founded by Adedele Adeayo for the purpose of bringing recent updates of society to the masses. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim esse, laudantium accusantium qui minima ipsum explicabo temporibus, corporis nam dolorum nulla similique. Hic repellat blanditiis repellendus tempore sequi perferendis eum cupiditate error quisquam illum corporis sed sunt, quas eaque, voluptatum quibusdam nisi non possimus reiciendis nihil! Eligendi, unde est.
+    <ul>
+        <li>Goodreads books reviews data was used in this Website</li>
+        <li>Goodreads API was used in this website</li>
+        <li>Heroku Database was used too.</li>
+        <li>Adminer was used to access Heroku</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock %}

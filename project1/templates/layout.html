@@ -1,0 +1,33 @@
+<!-- Layout Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- bootstrap link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- css link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title> {% block title %} {% endblock %}</title>
+</head>
+<body>
+    <header>
+        Dele Read's
+    </header>
+
+    <!-- Input from other pages --> 
+    {%block body%}
+    {% endblock %}
+
+    <!-- Bottom of the Page -->
+<footer > 
+    <ul>
+        <li><a href="{{ url_for('contact') }}" style="color: black;">Contact</a></li>
+        <li><a href="{{ url_for('about') }}" style="color: black;">About</a></li>
+    </ul>
+    <br>
+</footer>
+</body>
+</html>

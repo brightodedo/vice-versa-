@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Search
+{% endblock %}
+{% block body %}
+
+<!-- Search Bar -->
+<br>
+<div class="container">
+<form action="{{ url_for('result') }}", method="POST">
+    <input type="text" placeholder="Search... for a book" class="form-control" name="insert">
+    <br>
+    <button class="btn btn-success">Search</button>
+</form>
+</div>
+
+<!-- Results of search -->
+<div class="container">
+
+    <!-- If results not found --> 
+    <h1> {{ empty }} </h1>
+    <table>
+        <tr>
+            <th>Title of book</th>
+            <th>Author</th>
+            <th>ISBN</th>
+        </tr>
+    {% for book in items %}
+        <tr>
+            <td> <a href="{{ url_for('review', book_isbn=book.isbn) }}">{{ book.title}}</a></td>
+            <td> <a href="{{ url_for('review', book_isbn=book.isbn) }}">{{ book.author }}</a></td>
+            <td> <a href="{{ url_for('review', book_isbn=book.isbn) }}">{{ book.isbn }}</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{%   endblock  %}
