@@ -1,0 +1,91 @@
+$color1: teal;
+$myfont: "Times New Roman", Times, serif;
+$color2: black;
+
+%heading{
+    font-family: $myfont;
+    text-align: center;
+}
+%frontpage{
+    color: $color2;
+    font-weight: bold;
+}
+
+h1{
+    @extend %heading;
+    font-size: 4rem;
+    background-color: $color1;
+    padding:5mm;
+    margin: 0%;
+    width: 100%;
+    height: 10rem;
+}
+h3{
+    @extend %heading;
+    font-size: 4rem;
+}
+#story{
+    @extend %frontpage;
+    font-size: 1.2cm;
+    padding-left: 30%;
+}
+
+#Today, #highlight{
+    @extend %frontpage;
+    padding-left: 2cm;
+}
+
+#story:hover, #Today:hover,#highlight:hover{
+    color: $color1;
+}
+
+th, td{
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid black;
+  text-align: center;
+}
+th{
+  background-color: $color1;  
+}
+
+footer{
+    background-color: $color2;
+    height: 4cm;
+    text-align: center;
+}
+ul{
+    li > a {
+        margin: 5rem;
+        color: $color1;
+        font-size: 150%;
+    }
+}
+
+@media (min-width: 1000px) {
+.row > a {
+  padding: 13px;
+  font-size: 20px;
+  color: white;
+  background-color: $color2;
+}
+.row > a:hover {
+  background-color: orange;
+}
+.container p {
+  margin-left: 15rem;
+  margin-right: 15rem;
+  font-weight: bold;
+}
+}
+@media print,(max-width: 1000px){
+  #nondisplay{
+    display: none;
+  }
+}
+
+@media (min-width: 1000px){
+  #display{
+    display: none;
+  }
+}
